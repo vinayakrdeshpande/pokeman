@@ -1,2 +1,0 @@
-INSERT INTO POKEMAN (id, name) VALUES (1, 'Vinayak');
-INSERT INTO POKEMAN (id, name) VALUES (2, 'KHOLI');

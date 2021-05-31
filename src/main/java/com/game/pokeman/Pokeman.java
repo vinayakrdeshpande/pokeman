@@ -1,23 +1,23 @@
 package com.game.pokeman;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 
 @Entity
 @Table(name="POKEMAN")
 public class Pokeman {
   
-	@Id
-	 Integer id;
-	 String name;
+	 @Id  @GeneratedValue(strategy = GenerationType.AUTO)
+	 private Integer id;
+	 private String name;
+	 private String type;
+	 private Integer speed;
+	 private Integer attack;
+	 private Integer hp;
 	public Integer getId() {
 		return id;
 	}
@@ -29,6 +29,29 @@ public class Pokeman {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}	
-	 
+	}
+	public String getType() {
+		return type;
+	}
+	public void setType(String type) {
+		this.type = type;
+	}
+	public Integer getSpeed() {
+		return speed;
+	}
+	public void setSpeed(Integer speed) {
+		this.speed = speed;
+	}
+	public Integer getHp() {
+		return hp;
+	}
+	public void setHp(Integer hp) {
+		this.hp = hp;
+	}
+	public Integer getAttack() {
+		return attack;
+	}
+	public void setAttack(Integer attack) {
+		this.attack = attack;
+	}
 }
